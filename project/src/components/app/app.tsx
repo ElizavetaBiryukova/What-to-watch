@@ -9,6 +9,7 @@ type AppScreenProps = {
   backgroundPosterFilm:string;
 }
 
+
 function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm }: AppScreenProps): JSX.Element {
   return (
     <Main
