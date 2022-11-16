@@ -6,7 +6,7 @@ function Error(): JSX.Element {
       <h1>
         404.
         <br />
-        Page not found
+        <p>Page not found</p>
       </h1>
       <Link to="/">Go to main page</Link>
     </div>

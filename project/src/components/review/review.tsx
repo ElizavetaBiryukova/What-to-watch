@@ -1,4 +1,4 @@
-export function Review(): JSX.Element {
+function Review(): JSX.Element {
   return (
 
     <section className="film-card film-card--full">
@@ -96,3 +96,5 @@ export function Review(): JSX.Element {
 
   );
 }
+
+export default Review;
