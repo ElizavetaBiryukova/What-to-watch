@@ -20,3 +20,15 @@ export function generateImage() {
 
   return image;
 }
+
+export function generateVideo() {
+  const video = [
+    'https://videos.pond5.com/4k-personal-trainer-shows-client-footage-071942434_main_xxl.mp4',
+    'https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4',
+    'https://videos.pond5.com/thanks-giving-chapel-interior-rotate-footage-054035898_main_xxl.mp4',
+    'https://videos.pond5.com/silhouette-grass-blowing-wind-sunset-footage-099356536_main_xxl.mp4',
+  ];
+
+  const randomIndex = getRandomInteger(0, video.length - 1);
+  return video[randomIndex];
+}

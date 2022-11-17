@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import { Films } from '../types/types';
-import { generateName, generateImage } from './data-films';
+import { generateName, generateImage, generateVideo } from './data-films';
 
 
 export const films: Films = [
@@ -11,8 +11,8 @@ export const films: Films = [
     previewImage: `img/${generateImage()}.jpg`,
     backgroundImage: `img/${generateImage()}.jpg`,
     backgroundColor: '#ffffff',
-    videoLink: 'https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4',
-    previewVideoLink: 'https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4',
+    videoLink: generateVideo(),
+    previewVideoLink: generateVideo(),
     description: 'In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustaves friend and protege.',
     rating: 8.9,
     scoresCount: 240,
