@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
+import { films } from './mocks/films';
 
 const InfoPromoFilm = {
   CARDS_COUNT: 20,
@@ -22,6 +23,9 @@ root.render(
       dateFilm={InfoPromoFilm.DATE}
       posterFilm={InfoPromoFilm.POSTER}
       backgroundPosterFilm={InfoPromoFilm.BG_POSTER}
+      films={films}
+
     />
   </React.StrictMode>,
 );
+

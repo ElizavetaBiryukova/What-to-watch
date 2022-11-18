@@ -1,4 +1,6 @@
-import { getRandomInteger} from './utils';
+import dayjs from 'dayjs';
+import { getRandomInteger, shuffleArray } from './utils';
+
 
 export function generateName() {
   const names = [
@@ -31,4 +33,87 @@ export function generateVideo() {
 
   const randomIndex = getRandomInteger(0, video.length - 1);
   return video[randomIndex];
+}
+
+export function generateDescription() {
+  const description = [
+    'In the 1930s, the Grand Budapest Hotel is a popular European ski resort, presided over by concierge Gustave H. (Ralph Fiennes). Zero, a junior lobby boy, becomes Gustaves friend and protege.',
+    'The Aviator is a 2004 American epic biographical drama film directed by Martin Scorsese and written by John Logan.',
+    'Fantastic Beasts: The Crimes of Grindelwald is a 2018 fantasy film directed by David Yates and written by J. K. Rowling. The sequel to Fantastic Beasts and Where to Find Them (2016), it is the second instalment in the Fantastic Beasts film series and the tenth overall in the Wizarding World franchise.',
+  ];
+
+  const randomIndex = getRandomInteger(0, description.length - 1);
+  return description[randomIndex];
+}
+
+export function generateRating() {
+  const raiting = [];
+
+  for (let i = 1; i <= 10; i = i + 0.1) {
+    raiting.push(i.toFixed(1));
+  }
+  const randomIndex = getRandomInteger(0, raiting.length - 1);
+
+  return Number(raiting[randomIndex]);
+}
+
+export function generateScores() {
+  const scores = getRandomInteger(1, 1000);
+  return scores;
+}
+
+export function generateStarring() {
+  const starring = [
+    'Bill Murray',
+    'Edward Norton',
+    'Jude Law',
+    'Willem Dafoe',
+    'Saoirse Ronan'
+  ];
+
+  return shuffleArray(starring);
+}
+
+export function generateDirector() {
+  const directors = [
+    'Bill Murray',
+    'Edward Norton',
+    'Jude Law',
+    'Willem Dafoe',
+    'Saoirse Ronan'
+  ];
+
+  const randomIndex = getRandomInteger(0, directors.length - 1);
+
+  return directors[randomIndex];
+}
+
+export function generateGenre() {
+  const genres = [
+    'Drama',
+    'Mystery',
+    'Comedy',
+    'Western',
+    'Musical'
+  ];
+
+  const randomIndex = getRandomInteger(0, genres.length - 1);
+
+  return genres[randomIndex];
+}
+
+export function generateDate() {
+  const days = getRandomInteger(-7, 30);
+  const months = getRandomInteger(1, 12);
+  const years = getRandomInteger(0, 50);
+
+  return dayjs()
+    .add(days, 'day')
+    .add(months, 'month')
+    .subtract(years, 'year')
+    .toDate();
+}
+
+export function generateFavorite() {
+  return !getRandomInteger(0, 1);
 }

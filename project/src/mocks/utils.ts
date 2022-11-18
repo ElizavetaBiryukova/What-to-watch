@@ -8,7 +8,7 @@ export const getRandomInteger = (a = 0, b = 1) => {
 };
 
 //перемешивает массив
-type array = Array<string | number>;
+type array = Array<string>;
 export const shuffleArray = (array : array) => {
   for (let i = array.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));

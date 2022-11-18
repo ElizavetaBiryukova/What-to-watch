@@ -9,6 +9,7 @@ import MyList from '../my-list/my-list';
 import Player from '../player/player';
 import Review from '../review/review';
 import PrivateRoute from '../private-route/private-route';
+import {Films} from '../../types/types';
 
 type AppScreenProps = {
   cardsCount: number;
@@ -17,11 +18,13 @@ type AppScreenProps = {
   dateFilm: number;
   posterFilm: string;
   backgroundPosterFilm: string;
+  films: Films;
 }
 
 
-function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm }: AppScreenProps): JSX.Element {
+function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films }: AppScreenProps): JSX.Element {
   return (
+
     <BrowserRouter>
       <Routes>
         <Route
