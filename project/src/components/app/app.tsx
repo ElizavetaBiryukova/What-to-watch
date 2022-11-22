@@ -9,7 +9,8 @@ import MyList from '../my-list/my-list';
 import Player from '../player/player';
 import Review from '../review/review';
 import PrivateRoute from '../private-route/private-route';
-import {Films} from '../../types/types';
+import { Films } from '../../types/types';
+
 
 type AppScreenProps = {
   cardsCount: number;
@@ -23,6 +24,8 @@ type AppScreenProps = {
 
 
 function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films }: AppScreenProps): JSX.Element {
+  // const [firstFilm] = films;
+
   return (
 
     <BrowserRouter>
@@ -37,6 +40,7 @@ function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, background
               dateFilm={dateFilm}
               posterFilm={posterFilm}
               backgroundPosterFilm={backgroundPosterFilm}
+              films={films}
             />
           }
         />
@@ -52,7 +56,9 @@ function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, background
             <PrivateRoute
               authorizationStatus={AuthorizationStatus.NoAuth}
             >
-              <MyList />
+              <MyList
+                films={films}
+              />
             </PrivateRoute>
           }
         />

@@ -1,5 +1,6 @@
 import FilmCard from '../film-card/film-card';
 import Logo from '../logo/logo';
+import {Films} from '../../types/types';
 
 type MainScreenProps = {
   cardsCount: number;
@@ -8,9 +9,10 @@ type MainScreenProps = {
   dateFilm: number;
   posterFilm: string;
   backgroundPosterFilm: string;
+  films: Films;
 }
 
-function Main({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm }: MainScreenProps): JSX.Element {
+function Main({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films }: MainScreenProps): JSX.Element {
   return (
     <>
       <section className="film-card">
