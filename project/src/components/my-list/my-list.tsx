@@ -1,5 +1,5 @@
 import Logo from '../logo/logo';
-import FilmCard from '../film-card/film-card';
+import FilmsList from '../films-list/films-list';
 import { Films } from '../../types/types';
 
 type MyListProps = {
@@ -32,7 +32,7 @@ function MyList({films}: MyListProps): JSX.Element {
       <section className="catalog">
         <h2 className="catalog__title visually-hidden">Catalog</h2>
 
-        <FilmCard films={films} />
+        <FilmsList films={films} />
 
       </section>
 
