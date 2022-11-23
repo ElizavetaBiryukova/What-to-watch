@@ -1,9 +1,9 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Main from '../main/main';
 import { AppRoute, AuthorizationStatus } from '../../const';
+// import { AppRoute } from '../../const';
 import Error from '../error/error';
 import Film from '../film/film';
-// import FilmCard from '../film-card/film-card';
 import Login from '../login/login';
 import MyList from '../my-list/my-list';
 import Player from '../player/player';
@@ -13,7 +13,6 @@ import { Films } from '../../types/types';
 
 
 type AppScreenProps = {
-  cardsCount: number;
   nameFilm: string;
   genreFilm: string;
   dateFilm: number;
@@ -23,8 +22,7 @@ type AppScreenProps = {
 }
 
 
-function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films }: AppScreenProps): JSX.Element {
-  // const [firstFilm] = films;
+function App({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films }: AppScreenProps): JSX.Element {
 
   return (
 
@@ -34,7 +32,6 @@ function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, background
           path={AppRoute.Main}
           element={
             <Main
-              cardsCount={cardsCount}
               nameFilm={nameFilm}
               genreFilm={genreFilm}
               dateFilm={dateFilm}
@@ -62,11 +59,24 @@ function App({ cardsCount, nameFilm, genreFilm, dateFilm, posterFilm, background
             </PrivateRoute>
           }
         />
+        {/* <Route
+          path={AppRoute.MyList}
+          element={
+            <MyList
+              films={films}
+            />
+
+          }
+        /> */}
         <Route path={AppRoute.AddReview}
           element={<Review />}
         />
         <Route path={AppRoute.Player}
-          element={<Player />}
+          element={
+            <Player
+              films={films}
+            />
+          }
         />
 
         <Route path='*'

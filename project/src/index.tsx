@@ -4,7 +4,6 @@ import App from './components/app/app';
 import { films } from './mocks/films';
 
 const InfoPromoFilm = {
-  CARDS_COUNT: 20,
   TITLE: 'The Grand Budapest Hotel',
   GENRE: 'Drama',
   DATE: 2014,
@@ -17,7 +16,6 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
     <App
-      cardsCount={InfoPromoFilm.CARDS_COUNT}
       nameFilm={InfoPromoFilm.TITLE}
       genreFilm={InfoPromoFilm.GENRE}
       dateFilm={InfoPromoFilm.DATE}

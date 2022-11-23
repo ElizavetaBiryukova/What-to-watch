@@ -8,12 +8,14 @@ type FilmsListProps = {
 function FilmsList({ films }: FilmsListProps): JSX.Element {
 
   return (
-    <section className="catalog">
-      <h2 className="catalog__title visually-hidden">Catalog</h2>
-      <FilmCard
-        films={films}
-      />
-    </section>
+    <div className="catalog__films-list">
+      {films.map((film) => (
+        <FilmCard
+          key={film.id}
+          film={film}
+        />
+      ))}
+    </div>
 
   );
 }

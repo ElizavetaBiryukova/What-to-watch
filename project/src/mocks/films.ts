@@ -1,11 +1,12 @@
 import { nanoid } from 'nanoid';
-import { Films } from '../types/types';
+import { Films, FilmType } from '../types/types';
 import { generateName, generateImage, generateVideo, generateDescription, generateRating, generateScores, generateStarring, generateDirector, generateGenre, generateDate, generateFavorite } from './data-films';
 
 
-export const films: Films = [
+const generateFilms = () => {
+  const film: FilmType =
   {
-    id: Number(nanoid()),
+    id: nanoid(),
     name: generateName(),
     posterImage: `img/${generateImage()}-poster.jpg`,
     previewImage: `img/${generateImage()}.jpg`,
@@ -22,6 +23,10 @@ export const films: Films = [
     genre: generateGenre(),
     released: Number(generateDate()),
     isFavorite: generateFavorite(),
-  }
-];
+  };
 
+  return film;
+};
+
+
+export const films: Films = new Array(8).fill(0).map(generateFilms);

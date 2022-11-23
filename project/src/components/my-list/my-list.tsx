@@ -6,7 +6,7 @@ type MyListProps = {
   films: Films;
 }
 
-function MyList({films}: MyListProps): JSX.Element {
+function MyList({ films }: MyListProps): JSX.Element {
 
   return (
     <div className="user-page">
@@ -33,6 +33,7 @@ function MyList({films}: MyListProps): JSX.Element {
         <h2 className="catalog__title visually-hidden">Catalog</h2>
 
         <FilmsList films={films} />
+
 
       </section>
 
