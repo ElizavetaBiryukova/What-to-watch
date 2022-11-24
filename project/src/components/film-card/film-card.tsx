@@ -1,16 +1,15 @@
-// import {useState} from 'react';
 import { FilmType } from '../../types/types';
 
 type FilmCardProps = {
   film: FilmType;
-  // onMouseEnter: (id: string) => void;
+  onFocus: (id: string) => void;
 }
 
-function FilmCard({ film }: FilmCardProps): JSX.Element {
+function FilmCard({ film, onFocus }: FilmCardProps): JSX.Element {
 
   return (
 
-    <article className="small-film-card catalog__films-card">
+    <article className="small-film-card catalog__films-card" onFocus={() => onFocus(film.id)}>
       <div className="small-film-card__image">
         <img src={film.posterImage} alt={film.name} width="280" height="175" />
       </div>
