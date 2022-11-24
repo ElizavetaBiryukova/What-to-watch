@@ -1,7 +1,6 @@
 import dayjs from 'dayjs';
 import { getRandomInteger, shuffleArray } from './utils';
 
-
 export function generateName() {
   const names = [
     'The Grand Budapest Hotel',
@@ -68,7 +67,7 @@ export function generateStarring() {
     'Edward Norton',
     'Jude Law',
     'Willem Dafoe',
-    'Saoirse Ronan'
+    'Saoirse Ronan',
   ];
 
   return shuffleArray(starring);
@@ -117,3 +116,4 @@ export function generateDate() {
 export function generateFavorite() {
   return !getRandomInteger(0, 1);
 }
+

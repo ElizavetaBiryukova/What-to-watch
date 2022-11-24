@@ -1,12 +1,11 @@
-import { nanoid } from 'nanoid';
+import nextId from 'react-id-generator';
 import { Films, FilmType } from '../types/types';
 import { generateName, generateImage, generateVideo, generateDescription, generateRating, generateScores, generateStarring, generateDirector, generateGenre, generateDate, generateFavorite } from './data-films';
-
 
 const generateFilms = () => {
   const film: FilmType =
   {
-    id: nanoid(),
+    id: nextId(),
     name: generateName(),
     posterImage: `img/${generateImage()}-poster.jpg`,
     previewImage: `img/${generateImage()}.jpg`,
