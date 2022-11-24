@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
 import { films } from './mocks/films';
 
+
 const InfoPromoFilm = {
   TITLE: 'The Grand Budapest Hotel',
   GENRE: 'Drama',

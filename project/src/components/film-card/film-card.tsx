@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FilmType } from '../../types/types';
 
 type FilmCardProps = {
@@ -14,7 +15,7 @@ function FilmCard({ film, onFocus }: FilmCardProps): JSX.Element {
         <img src={film.posterImage} alt={film.name} width="280" height="175" />
       </div>
       <h3 className="small-film-card__title">
-        <a className="small-film-card__link" href="film-page.html">{film.name}</a>
+        <Link className="small-film-card__link" to={`/films/${film.id}`}>{film.name}</Link>
       </h3>
     </article>
 

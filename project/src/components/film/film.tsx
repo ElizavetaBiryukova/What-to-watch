@@ -1,3 +1,6 @@
+import Logo from '../logo/logo';
+import { Link } from 'react-router-dom';
+
 function Film(): JSX.Element {
   return (
     <>
@@ -11,11 +14,7 @@ function Film(): JSX.Element {
 
           <header className="page-header film-card__head">
             <div className="logo">
-              <a href="main.html" className="logo__link">
-                <span className="logo__letter logo__letter--1">W</span>
-                <span className="logo__letter logo__letter--2">T</span>
-                <span className="logo__letter logo__letter--3">W</span>
-              </a>
+              <Logo />
             </div>
 
             <ul className="user-block">
@@ -25,7 +24,7 @@ function Film(): JSX.Element {
                 </div>
               </li>
               <li className="user-block__item">
-                <a href='/#' className="user-block__link">Sign out</a>
+                <Link to={'/login'} className="user-block__link">Sign out</Link>
               </li>
             </ul>
           </header>
@@ -51,7 +50,7 @@ function Film(): JSX.Element {
                   </svg>
                   <span>My list</span>
                 </button>
-                <a href="add-review.html" className="btn film-card__button">Add review</a>
+                <Link to={'/films/:id/review'} className="btn film-card__button">Add review</Link>
               </div>
             </div>
           </div>
@@ -110,7 +109,7 @@ function Film(): JSX.Element {
                 <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
               </div>
               <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Fantastic Beasts: The Crimes of Grindelwald</a>
+                <Link className="small-film-card__link" to={'/films/:id'}>Fantastic Beasts: The Crimes of Grindelwald</Link>
               </h3>
             </article>
 
@@ -119,7 +118,7 @@ function Film(): JSX.Element {
                 <img src="img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175" />
               </div>
               <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Bohemian Rhapsody</a>
+                <Link className="small-film-card__link" to={'/films/:id'}>Bohemian Rhapsody</Link>
               </h3>
             </article>
 
@@ -128,7 +127,7 @@ function Film(): JSX.Element {
                 <img src="img/macbeth.jpg" alt="Macbeth" width="280" height="175" />
               </div>
               <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Macbeth</a>
+                <Link className="small-film-card__link" to={'/films/:id'}>Macbeth</Link>
               </h3>
             </article>
 
@@ -137,7 +136,7 @@ function Film(): JSX.Element {
                 <img src="img/aviator.jpg" alt="Aviator" width="280" height="175" />
               </div>
               <h3 className="small-film-card__title">
-                <a className="small-film-card__link" href="film-page.html">Aviator</a>
+                <Link className="small-film-card__link" to={'/films/:id'}>Aviator</Link>
               </h3>
             </article>
           </div>
@@ -146,11 +145,11 @@ function Film(): JSX.Element {
 
       <footer className="page-footer">
         <div className="logo">
-          <a href="main.html" className="logo__link logo__link--light">
+          <Link to={'/'} className="logo__link logo__link--light">
             <span className="logo__letter logo__letter--1">W</span>
             <span className="logo__letter logo__letter--2">T</span>
             <span className="logo__letter logo__letter--3">W</span>
-          </a>
+          </Link>
         </div>
 
         <div className="copyright">

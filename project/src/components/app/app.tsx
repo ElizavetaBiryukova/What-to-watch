@@ -1,7 +1,6 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Main from '../main/main';
 import { AppRoute, AuthorizationStatus } from '../../const';
-// import { AppRoute } from '../../const';
 import Error from '../error/error';
 import Film from '../film/film';
 import Login from '../login/login';
@@ -69,7 +68,11 @@ function App({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, 
           }
         /> */}
         <Route path={AppRoute.AddReview}
-          element={<Review />}
+          element={
+            <Review
+              film={films[0]}
+            />
+          }
         />
         <Route path={AppRoute.Player}
           element={
