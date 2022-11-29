@@ -15,7 +15,7 @@ function FilmsList({ films }: FilmsListProps): JSX.Element {
         <FilmCard
           key={film.id}
           film={film}
-          onFocus={() => setActiveCard(film.id)}
+          onMouseEnter={() => setActiveCard(film.id)}
         />
       ))}
     </div>
