@@ -41,7 +41,11 @@ function App({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, 
           }
         />
         <Route path={AppRoute.Film}
-          element={<Film />}
+          element={
+            <Film
+              film={films[0]}
+            />
+          }
         />
         <Route path={AppRoute.SignIn}
           element={<Login />}

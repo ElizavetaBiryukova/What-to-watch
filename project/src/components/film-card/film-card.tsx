@@ -28,6 +28,7 @@ function FilmCard({ film, onMouseEnter }: FilmCardProps): JSX.Element {
   };
 
   useEffect(() => {
+
     clearTime();
     if (isFocus) {
       timer.current = setTimeout(() => setIsPlaying(true), DELAY_TIME);
