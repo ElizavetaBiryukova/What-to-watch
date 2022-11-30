@@ -1,11 +1,13 @@
-import { FilmType } from '../../types/types';
+import { FilmType, Comments } from '../../types/types';
 import Overview from '../tabs/tabs-overview';
+import Reviews from '../tabs/tabs-reviews';
 
 type TabsProps = {
   film: FilmType;
+  comments: Comments;
 }
 
-function Tabs({ film }: TabsProps): JSX.Element {
+function Tabs({ film, comments }: TabsProps): JSX.Element {
   return (
 
     <div className="film-card__desc">
@@ -24,6 +26,7 @@ function Tabs({ film }: TabsProps): JSX.Element {
       </nav>
 
       <Overview film={film} />
+      <Reviews comments={comments}/>
     </div>
 
   );

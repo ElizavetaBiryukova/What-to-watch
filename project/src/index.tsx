@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/app/app';
 import { films } from './mocks/films';
+import { comments } from './mocks/comments';
 
 
 const InfoPromoFilm = {
@@ -23,7 +24,7 @@ root.render(
       posterFilm={InfoPromoFilm.POSTER}
       backgroundPosterFilm={InfoPromoFilm.BG_POSTER}
       films={films}
-
+      comments={comments}
     />
   </React.StrictMode>,
 );

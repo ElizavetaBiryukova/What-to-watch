@@ -8,7 +8,7 @@ import MyList from '../my-list/my-list';
 import Player from '../player/player';
 import Review from '../review/review';
 import PrivateRoute from '../private-route/private-route';
-import { Films } from '../../types/types';
+import { Films, Comments } from '../../types/types';
 
 
 type AppScreenProps = {
@@ -18,10 +18,11 @@ type AppScreenProps = {
   posterFilm: string;
   backgroundPosterFilm: string;
   films: Films;
+  comments: Comments;
 }
 
 
-function App({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films }: AppScreenProps): JSX.Element {
+function App({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films, comments }: AppScreenProps): JSX.Element {
 
   return (
 
@@ -44,6 +45,7 @@ function App({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, 
           element={
             <Film
               film={films[0]}
+              comments={comments}
             />
           }
         />

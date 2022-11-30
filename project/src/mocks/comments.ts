@@ -20,4 +20,4 @@ const generateComments = () => {
 };
 
 
-export const comments: Comments = new Array(8).fill(0).map(generateComments);
+export const comments: Comments = new Array(6).fill(0).map(generateComments);

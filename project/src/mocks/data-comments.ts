@@ -14,6 +14,6 @@ export function generateName() {
 }
 
 export function generateDate() {
-  const date = dayjs().format('[YYYYescape] YYYY-MM-DDTHH:mm:ssZ[Z]');
+  const date = dayjs().format('YYYY-MM-DDTHH:mm:ss[Z]');
   return date;
 }

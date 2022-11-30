@@ -102,18 +102,13 @@ export function generateGenre() {
 }
 
 export function generateDate() {
-  const days = getRandomInteger(-7, 30);
-  const months = getRandomInteger(1, 12);
-  const years = getRandomInteger(0, 50);
+  const years = getRandomInteger(1920, dayjs().year());
 
-  return dayjs()
-    .add(days, 'day')
-    .add(months, 'month')
-    .subtract(years, 'year')
-    .toDate();
+  return years;
 }
 
 export function generateFavorite() {
   return !getRandomInteger(0, 1);
 }
+
 

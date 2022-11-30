@@ -20,7 +20,7 @@ const generateFilms = () => {
     starring: generateStarring(),
     runTime: generateScores(),
     genre: generateGenre(),
-    released: Number(generateDate()),
+    released: generateDate(),
     isFavorite: generateFavorite(),
   };
 

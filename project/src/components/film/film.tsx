@@ -1,13 +1,14 @@
 import Logo from '../logo/logo';
 import { Link } from 'react-router-dom';
-import { FilmType } from '../../types/types';
+import { FilmType, Comments } from '../../types/types';
 import Tabs from '../tabs/tabs';
 
 type FilmProps = {
   film: FilmType;
+  comments: Comments;
 }
 
-function Film({ film }: FilmProps): JSX.Element {
+function Film({ film, comments }: FilmProps): JSX.Element {
   return (
     <>
       <section className="film-card film-card--full">
@@ -67,7 +68,10 @@ function Film({ film }: FilmProps): JSX.Element {
             <div className="film-card__poster film-card__poster--big">
               <img src={film.posterImage} alt={film.name} width="218" height="327" />
             </div>
-            <Tabs film={film} />
+            <Tabs
+              film={film}
+              comments={comments}
+            />
           </div>
         </div>
       </section>
