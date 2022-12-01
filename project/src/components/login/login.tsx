@@ -1,12 +1,11 @@
 import Logo from '../logo/logo';
-import LogoFooter from '../logo/logoFooter';
 
 function Login(): JSX.Element {
   return (
     <div className="user-page">
       <header className="page-header user-page__head">
         <div className="logo">
-          <Logo />
+          <Logo className="logo__link" />
         </div>
 
         <h1 className="page-title user-page__title">Sign in</h1>
@@ -32,7 +31,7 @@ function Login(): JSX.Element {
 
       <footer className="page-footer">
         <div className="logo">
-          <LogoFooter />
+          <Logo className="logo__link logo__link--light" />
         </div>
 
         <div className="copyright">

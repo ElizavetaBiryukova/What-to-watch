@@ -21,7 +21,7 @@ function Review({ film }: ReviewProps): JSX.Element {
 
         <header className="page-header">
           <div className="logo">
-            <Logo />
+            <Logo className="logo__link" />
           </div>
 
           <nav className="breadcrumbs">

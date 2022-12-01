@@ -1,5 +1,4 @@
 import Logo from '../logo/logo';
-import LogoFooter from '../logo/logoFooter';
 import { Link } from 'react-router-dom';
 import { Films, FilmType, Comments } from '../../types/types';
 import Tabs from '../tabs/tabs';
@@ -9,10 +8,11 @@ type FilmProps = {
   films: Films;
   film: FilmType;
   comments: Comments;
+
 }
 
 function Film({ film, comments, films }: FilmProps): JSX.Element {
-  const filmsMoreLikeThis = films.filter((item) => item.genre === film.genre).slice(0, 4);
+  const filmsMoreLikeThis = films.filter((item) => item.id !== film.id && item.genre === film.genre).slice(0, 4);
 
   return (
     <>
@@ -26,7 +26,7 @@ function Film({ film, comments, films }: FilmProps): JSX.Element {
 
           <header className="page-header film-card__head">
             <div className="logo">
-              <Logo />
+              <Logo className="logo__link" />
             </div>
 
             <ul className="user-block">
@@ -91,7 +91,7 @@ function Film({ film, comments, films }: FilmProps): JSX.Element {
 
         <footer className="page-footer">
           <div className="logo">
-            <LogoFooter />
+            <Logo className="logo__link logo__link--light" />
           </div>
 
           <div className="copyright">

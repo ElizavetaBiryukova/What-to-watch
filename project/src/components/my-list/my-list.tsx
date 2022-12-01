@@ -1,5 +1,4 @@
 import Logo from '../logo/logo';
-import LogoFooter from '../logo/logoFooter';
 import FilmsList from '../films-list/films-list';
 import { Films } from '../../types/types';
 import { Link } from 'react-router-dom';
@@ -14,7 +13,7 @@ function MyList({ films }: MyListProps): JSX.Element {
     <div className="user-page">
       <header className="page-header user-page__head">
         <div className="logo">
-          <Logo />
+          <Logo className="logo__link" />
         </div>
 
         <h1 className="page-title user-page__title">My list</h1>
@@ -41,7 +40,7 @@ function MyList({ films }: MyListProps): JSX.Element {
 
       <footer className="page-footer">
         <div className="logo">
-          <LogoFooter />
+          <Logo className="logo__link logo__link--light" />
         </div>
 
         <div className="copyright">
