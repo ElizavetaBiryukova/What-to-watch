@@ -1,14 +1,19 @@
 import Logo from '../logo/logo';
+import LogoFooter from '../logo/logoFooter';
 import { Link } from 'react-router-dom';
-import { FilmType, Comments } from '../../types/types';
+import { Films, FilmType, Comments } from '../../types/types';
 import Tabs from '../tabs/tabs';
+import FilmsList from '../films-list/films-list';
 
 type FilmProps = {
+  films: Films;
   film: FilmType;
   comments: Comments;
 }
 
-function Film({ film, comments }: FilmProps): JSX.Element {
+function Film({ film, comments, films }: FilmProps): JSX.Element {
+  const filmsMoreLikeThis = films.filter((item) => item.genre === film.genre).slice(0, 4);
+
   return (
     <>
       <section className="film-card film-card--full">
@@ -80,55 +85,20 @@ function Film({ film, comments }: FilmProps): JSX.Element {
         <section className="catalog catalog--like-this">
           <h2 className="catalog__title">More like this</h2>
 
-          <div className="catalog__films-list">
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <Link className="small-film-card__link" to={'/films/:id'}>Fantastic Beasts: The Crimes of Grindelwald</Link>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/bohemian-rhapsody.jpg" alt="Bohemian Rhapsody" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <Link className="small-film-card__link" to={'/films/:id'}>Bohemian Rhapsody</Link>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/macbeth.jpg" alt="Macbeth" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <Link className="small-film-card__link" to={'/films/:id'}>Macbeth</Link>
-              </h3>
-            </article>
-
-            <article className="small-film-card catalog__films-card">
-              <div className="small-film-card__image">
-                <img src="img/aviator.jpg" alt="Aviator" width="280" height="175" />
-              </div>
-              <h3 className="small-film-card__title">
-                <Link className="small-film-card__link" to={'/films/:id'}>Aviator</Link>
-              </h3>
-            </article>
-          </div>
+          <FilmsList films={filmsMoreLikeThis} />
         </section>
+
+
+        <footer className="page-footer">
+          <div className="logo">
+            <LogoFooter />
+          </div>
+
+          <div className="copyright">
+            <p>© 2019 What to watch Ltd.</p>
+          </div>
+        </footer>
       </div>
-
-      <footer className="page-footer">
-        <div className="logo">
-          <Logo />
-        </div>
-
-        <div className="copyright">
-          <p>© 2019 What to watch Ltd.</p>
-        </div>
-      </footer>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Logo from '../logo/logo';
+import LogoFooter from '../logo/logoFooter';
 
 function Login(): JSX.Element {
   return (
@@ -31,7 +32,7 @@ function Login(): JSX.Element {
 
       <footer className="page-footer">
         <div className="logo">
-          <Logo />
+          <LogoFooter />
         </div>
 
         <div className="copyright">

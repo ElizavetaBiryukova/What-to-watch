@@ -1,5 +1,6 @@
 import FilmsList from '../films-list/films-list';
 import Logo from '../logo/logo';
+import LogoFooter from '../logo/logoFooter';
 import { Films } from '../../types/types';
 import { Link } from 'react-router-dom';
 
@@ -118,7 +119,7 @@ function Main({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm,
 
         <footer className="page-footer">
           <div className="logo">
-            <Logo />
+            <LogoFooter />
           </div>
 
           <div className="copyright">

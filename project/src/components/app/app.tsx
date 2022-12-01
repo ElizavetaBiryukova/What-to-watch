@@ -44,6 +44,7 @@ function App({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, 
         <Route path={AppRoute.Film}
           element={
             <Film
+              films={films}
               film={films[0]}
               comments={comments}
             />

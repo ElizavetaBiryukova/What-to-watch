@@ -1,4 +1,5 @@
 import Logo from '../logo/logo';
+import LogoFooter from '../logo/logoFooter';
 import FilmsList from '../films-list/films-list';
 import { Films } from '../../types/types';
 import { Link } from 'react-router-dom';
@@ -40,7 +41,7 @@ function MyList({ films }: MyListProps): JSX.Element {
 
       <footer className="page-footer">
         <div className="logo">
-          <Logo />
+          <LogoFooter />
         </div>
 
         <div className="copyright">
