@@ -1,7 +1,5 @@
-export const incrementGenre = (count: string): IncrementGenreAction => ({
-  type: ActionType.incrementGenre,
-});
+import { createAction } from '@reduxjs/toolkit';
 
-export const incrementFilmsList = (): IncrementFilmsListAction => ({
-  type: ActionType.incrementFilmsList,
-});
+export const setGenre = createAction('main/setGenre', (value) => ({ payload: value }));
+
+export const setFilmsList = createAction('main/setFilmsList');

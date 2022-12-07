@@ -13,4 +13,18 @@ enum AuthorizationStatus {
   Unknown = 'UNKNOWN',
 }
 
-export {AppRoute, AuthorizationStatus};
+enum Genres {
+  AllGenres= 'All genres',
+  Comedies='Comedies',
+  Crime='Crime',
+  Documentary='Documentary',
+  Dramas='Dramas',
+  Horror='Horror',
+  KidsFamily='Kids & Family',
+  Romance='Romance',
+  SciFi='Sci-Fi',
+  Thrillers='Thrillers'
+
+}
+
+export {AppRoute, AuthorizationStatus, Genres};
