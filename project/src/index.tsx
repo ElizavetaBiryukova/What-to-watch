@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './components/app/app';
 import { films } from './mocks/films';
 import { comments } from './mocks/comments';
-import { reducer } from './store/reducer';
+import { store } from './store/index';
 
 
 const InfoPromoFilm = {
@@ -16,11 +14,6 @@ const InfoPromoFilm = {
   BG_POSTER: 'bg-the-grand-budapest-hotel',
   POSTER: 'the-grand-budapest-hotel-poster',
 };
-
-const store = createStore(
-  reducer,
-  composeWithDevTools(),
-);
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
