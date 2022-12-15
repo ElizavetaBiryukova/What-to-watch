@@ -8,11 +8,13 @@ import {Films} from '../types/types';
 type InitialState = {
   genre: string;
   films: Films;
+  filteredFilms: Films;
 }
 
 const initialState : InitialState = {
   genre: Genres.AllGenres,
   films: [],
+  filteredFilms: [],
 };
 
 const reducer = createReducer(initialState, (builder) => {
@@ -22,10 +24,8 @@ const reducer = createReducer(initialState, (builder) => {
       state.films = films.filter((film) => film.genre === state.genre);
     })
     .addCase(setFilmsList, (state, action) => {
-
       state.films = action.payload;
-
-
+      state.filteredFilms = action.payload;
     });
 });
 

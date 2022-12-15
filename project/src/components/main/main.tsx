@@ -1,11 +1,9 @@
-import { useEffect } from 'react';
 import FilmsList from '../films-list/films-list';
 import Logo from '../logo/logo';
 import { Films } from '../../types/types';
 import { Link } from 'react-router-dom';
 import GenresList from '../genres-list/genres-list';
-import { useAppDispatch, useAppSelector } from '../../hooks';
-import { setFilmsList } from '../../store/action';
+import { useAppSelector } from '../../hooks';
 
 
 type MainScreenProps = {
@@ -18,12 +16,7 @@ type MainScreenProps = {
 }
 
 function Main({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm, films }: MainScreenProps): JSX.Element {
-  const filteredFilms = useAppSelector((state) => state.films);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(setFilmsList(films));
-  }, [dispatch]);
+  const filteredFilms = useAppSelector((state) => state.filteredFilms);
 
   return (
     <>
