@@ -8,13 +8,11 @@ import {Films} from '../types/types';
 type InitialState = {
   genre: string;
   films: Films;
-
 }
 
 const initialState : InitialState = {
   genre: Genres.AllGenres,
   films: [],
-
 };
 
 const reducer = createReducer(initialState, (builder) => {
