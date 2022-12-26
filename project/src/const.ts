@@ -27,4 +27,6 @@ enum Genres {
 
 }
 
-export {AppRoute, AuthorizationStatus, Genres};
+const FILMS_COUNT = 8;
+
+export {AppRoute, AuthorizationStatus, Genres, FILMS_COUNT};

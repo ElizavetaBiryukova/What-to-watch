@@ -28,4 +28,4 @@ const generateFilms = () => {
 };
 
 
-export const films: Films = new Array(8).fill(0).map(generateFilms);
+export const films: Films = new Array(30).fill(0).map(generateFilms);

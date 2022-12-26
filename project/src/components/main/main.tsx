@@ -87,7 +87,7 @@ function Main({ nameFilm, genreFilm, dateFilm, posterFilm, backgroundPosterFilm,
         <section className="catalog">
           <h2 className="catalog__title visually-hidden">Catalog</h2>
 
-          <GenresList films={films} />
+          <GenresList films={films}/>
 
           <FilmsList films={filteredFilms} />
 
